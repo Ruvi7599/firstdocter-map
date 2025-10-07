@@ -1,5 +1,5 @@
 import MapView from './components/MapView'
-import Sidebar from './components/Sidebar'
+import Sidebar from './components/SideBar.jsx'
 import { Page, TopBar, Brand, Button, Layout } from './styles'
 import { useClinicStore } from './store/clinics'
 
