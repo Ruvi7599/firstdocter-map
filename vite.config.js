@@ -7,5 +7,6 @@ import svgr from 'vite-plugin-svgr'
 export default defineConfig({
 
   plugins: [react(), svgr()],
+  base:process.env.VITE_BASE_PATH || "/firstdocter-map",
   
 })
