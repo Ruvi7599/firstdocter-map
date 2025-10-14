@@ -11,7 +11,11 @@ function CustomMarker({ position, onClick, isMain }) {
   return (
     <OverlayView position={position} mapPaneName={OverlayView.OVERLAY_MOUSE_TARGET}>
       <div
-        onClick={onClick}
+        onClick={(e) => {
+          // Prevent map-level click handlers from firing when a marker is clicked
+          e.stopPropagation()
+          if (typeof onClick === 'function') onClick()
+        }}
         title="View details"
         style={{
           transform: 'translate(-50%, -100%)',
